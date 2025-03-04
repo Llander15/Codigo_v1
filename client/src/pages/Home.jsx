@@ -5,9 +5,9 @@ export default function Home(){
             <h1>
                 Home
             </h1>
-            <NavLink to="./selection">Start</NavLink>
+            <NavLink to="/selection">Start</NavLink>
             <br />
-            <a href="/leaderBoards">Leader Boards</a>
+            <NavLink to="/leaderBoards">Leader Boards</NavLink>
         </div>
     );
 
