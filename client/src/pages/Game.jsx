@@ -224,7 +224,7 @@ export default function Game(){
                         <div className="skill-section">
                             <div className="game-options">{/* where quit, tips, run buttons are located */}
                                 <div className="game-options-left">                              
-                                    <NavLink to='../selection'><p className="game-btn">Back</p></NavLink>
+                                    <NavLink to='/selection'><p className="game-btn">Back</p></NavLink>
                                 </div>
                                 <div className="game-options-right">
                                     <button className="game-btn" id="game-tips-btn">Tips</button>
@@ -314,7 +314,7 @@ export default function Game(){
                         <button type="submit">Post score</button>
                     </form>
                     
-                    <NavLink to='../home'><p className="game-btn">Exit</p></NavLink>
+                    <NavLink to='/home' className="game-btn">Exit</NavLink>
                 </div>
             </div>
         );       

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"; // add useState later
+import { NavLink } from "react-router-dom";
 
 export default function LeaderBoards(){
     //const[ name,setName ] = useEffect('llander');
@@ -126,7 +127,7 @@ export default function LeaderBoards(){
                 </div>
                 
             </div>
-            <a href="./">Back</a>
+            <NavLink to="/home">Back</NavLink>
         </div>
     );
 }

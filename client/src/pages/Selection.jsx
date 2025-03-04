@@ -34,7 +34,7 @@ export default function Selection(){
     return(
         <div className="container">
             <div className="selection-head">
-                <div><a href="./" className="game-btn">Back</a></div>                
+                <NavLink to="/home" className="game-btn">Back</NavLink>               
                 <h1>Selection</h1>
             </div>
             
@@ -62,7 +62,7 @@ export default function Selection(){
                         <p>Boss HP: {bossHp}</p>
                 </div>
                 <div className="selection-btn ">
-                <NavLink to='../game' className={'game-btn'}>Confirm</NavLink> {/* confirms selection and goes to the game page */}
+                <NavLink to='/game' className={'game-btn'}>Confirm</NavLink> {/* confirms selection and goes to the game page */}
                 </div>
                 
             </div>
