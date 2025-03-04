@@ -1,0 +1,220 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    margin: auto;
+    width: 80%;
+}
+/*---------------------------*/
+/*----      Login         ---*/
+/*---------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------*/
+/*----      Sign up       ---*/
+/*---------------------------*/
+
+
+
+
+
+
+
+
+
+/*---------------------------*/
+/*----      Home          ---*/
+/*---------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------*/
+/*----      Selection     ---*/
+/*---------------------------*/
+.selection-head{
+    display: flex;
+    width: 40%;
+    gap: 50px;
+    margin-bottom: 50px;
+    align-items: center;
+}
+.selection{
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.selection-btn{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+}
+.difficultyCard{
+    justify-content: center;
+    padding: 50px;
+    gap: 20px;
+    border: 3px solid black;
+}
+.difficultyCard:hover{
+    background-color: black;
+    color: white;
+}
+.selection-confirmation-section{
+    display: flex;
+    align-items: center;
+}
+.selected-difficulty-banner{
+    width: 60%;
+}
+
+
+
+
+
+
+
+
+
+/*---------------------------*/
+/*----      Game          ---*/
+/*---------------------------*/
+
+.game-section{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.game-visual{
+    width: 60%;
+}
+.game-description{
+    gap: 10px;
+}
+.boss-section{
+    display: flex;
+    flex-direction: row;
+}
+.boss-description{
+    width: 70%;
+    height: 150px;
+    display: flex;
+    justify-content: end;
+    padding-right: 50px;
+}
+.boss-img{
+
+}
+#boss-img{
+    
+}
+.player-section{
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+.player-img{
+    width: 30%;
+}
+#player-img{
+
+}
+.player-description{
+    width: 70%;
+    display: flex;
+    align-items: end;
+}
+.skill-section{
+
+}
+.game-options{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+.game-options-left{
+    width: 10%;
+}
+.game-options-right{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: right;
+}
+.game-btn{
+    padding: 10px;
+    background-color: rgb(31, 48, 229);
+    color: white;
+    border: 0;
+    border-radius: 5px;
+}
+.game-btn:hover{
+    background-color: black;
+}
+.skill-selection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.skill-card{
+    height: 270px; 
+    width: 200px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.skill-card:hover{
+    color: white;
+    background-color: black;
+}
+
+
+
+
+
+
+
+
+
+/*---------------------------*/
+/*----    Leader Board    ---*/
+/*---------------------------*/
+.leaderboard-section{
+    display: flex;
+    justify-content: space-between;
+}
+.leaderboard{
+    width: 400px;
+
+}
+.leaderboard-table{
+    border-collapse: collapse;
+    width: 100%;
+    
+}
+.leaderboard-head{
+    background-color: gray;
+}
+th, td{
+    border: 1px solid black;
+}
