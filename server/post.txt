@@ -1,0 +1,8 @@
+// POST /leaderBoard
+router.post("/leaderBoard", async (req, res) => {
+    const collection = getLeaderBoardCollection();
+    const { timer, stage, username } = req.body; 
+
+    const newLeaderBoard = await collection.insertOne({ timer, stage, username });
+    res.status(201).json({ timer, stage, username, _id: newLeaderBoard.insertedId });
+  })

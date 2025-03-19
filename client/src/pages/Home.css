@@ -1,0 +1,112 @@
+/* Menu Container */
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url("../Components/Assets/background.png");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+}
+
+/* Game Logo */
+.game-logo {
+  width: 500px; /* Make logo bigger */
+  margin-bottom: 20px; /* Add spacing */
+  position: absolute;
+  top: 15%; /* Move logo slightly down */
+}
+
+/* Game Title */
+.game-title {
+  font-size: 4rem;
+  font-weight: bold;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+  margin-bottom: 30px;
+}
+
+/* Menu Buttons Container */
+.menu-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-start; /* Align menu buttons to the left */
+  position: absolute;
+  left: 150px; /* Move buttons further to the right */
+  top: 50%;
+  transform: translateY(-40%);
+}
+
+/* Menu Buttons */
+.menu-button {
+  background: none;
+  border: 3px solid white; /* Thicker border for visibility */
+  padding: 20px 40px; /* Make buttons bigger */
+  border-radius: 15px; /* Slightly rounded corners */
+  cursor: pointer;
+  font-size: 3rem; /* Make text larger */
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.menu-button:hover {
+  transform: scale(1.1);
+  color: yellow;
+  border-color: yellow; /* Change border color on hover */
+}
+
+/* Top Right Menu */
+.menu-top-right {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+/* Menu Links */
+.menu-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.menu-link:hover {
+  color: yellow;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .game-title {
+      font-size: 3rem;
+  }
+
+  .game-logo {
+      width: 350px; /* Adjust logo size on smaller screens */
+      top: 10%; /* Move logo down further on smaller screens */
+  }
+
+  .menu-buttons {
+      left: 80px; /* Adjust for smaller screens */
+  }
+
+  .menu-button {
+      font-size: 2rem;
+      padding: 15px 30px; /* Adjust padding for smaller screens */
+  }
+
+  .menu-top-right {
+      flex-direction: column;
+      align-items: flex-end;
+  }
+}

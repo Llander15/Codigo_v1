@@ -1,0 +1,209 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #111, #333);
+    color: white;
+}
+
+/* Game Section */
+.game-section {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+/* Left Side - Game Visual */
+.game-visual {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Boss & Player Descriptions */
+.game-descriptions {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Boss Section */
+.boss-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.boss-description {
+    flex: 1;
+    padding: 10px;
+    background: rgba(255, 0, 0, 0.3);
+    border-radius: 10px;
+    text-align: left;
+}
+
+.boss-img img {
+    width: 100px;
+    height: 100px;
+}
+
+/* Player Section */
+.player-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.player-img img {
+    width: 80px;
+    height: 80px;
+}
+
+.player-description {
+    font-size: 1.2rem;
+}
+
+/* Skill Section */
+.skill-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Game Options (Buttons) */
+.game-options {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+.game-btn {
+    padding: 10px 15px;
+    font-size: 1rem;
+    background: crimson;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.game-btn:hover {
+    background: darkred;
+}
+
+/* Skill Selection */
+.skill-selection {
+    display: flex;
+    gap: 10px;
+}
+
+.skill-card {
+    width: 150px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+}
+
+.skill-card img {
+    width: 80px;
+    height: 80px;
+}
+
+/* Right Side - Code Section */
+.code-section {
+    flex: 1;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+}
+
+.selected-code-description {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.player-input-section input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+/* Score Section */
+.score-section {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.score-section h4 {
+    margin-bottom: 10px;
+}
+
+.score-section input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.score-section button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    background: limegreen;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.score-section button:hover {
+    background: darkgreen;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .game-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .game-visual, .code-section {
+        width: 100%;
+    }
+
+    .skill-selection {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .skill-card {
+        width: 120px;
+    }
+}

@@ -1,0 +1,24 @@
+.settings-container {
+  text-align: center;
+  padding: 20px;
+  background-color: white; /* Ensure visible background */
+  height: 100vh;
+  position: relative;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333; /* Adjust color */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.back-button:hover {
+  color: #007bff; /* Highlight color */
+}
