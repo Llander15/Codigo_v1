@@ -1,0 +1,29 @@
+.settings-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url("../Components/Assets/backgroundsetting.gif") no-repeat center center;
+  background-size: cover;
+  padding: 20px;
+  height: 100vh;
+  position: relative;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.back-button:hover {
+  color: #007bff;
+}

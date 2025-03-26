@@ -1,13 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.aa099369.css",
-    "main.js": "/static/js/main.aa4a6a99.js",
+    "main.css": "/static/css/main.2a8c2a26.css",
+    "main.js": "/static/js/main.e1cfd42b.js",
+    "static/media/battle-music.mp3": "/static/media/battle-music.4281ec0f70279c5d8fe3.mp3",
+    "static/media/menu-music.mp3": "/static/media/menu-music.c65c34ef5af1890219bf.mp3",
+    "static/media/codigoboss.gif": "/static/media/codigoboss.5f8bcb3ba4c066709de8.gif",
+    "static/media/background.gif": "/static/media/background.e7f7c819d03124c4a265.gif",
+    "static/media/backgroundselection.gif": "/static/media/backgroundselection.412d560317e3f416f684.gif",
+    "static/media/backgroundplay.gif": "/static/media/backgroundplay.0a04c6912e39dc8dc3f8.gif",
+    "static/media/codigoplayer.gif": "/static/media/codigoplayer.fa8934d5f940262e3ec4.gif",
+    "static/media/backgroundsetting.gif": "/static/media/backgroundsetting.d7220a9424de59edd00c.gif",
+    "static/media/logo.png": "/static/media/logo.e3a6340df6f0fc5e2428.png",
+    "static/media/fantasy skull.png": "/static/media/fantasy skull.8563280bfd9a077298dd.png",
+    "static/media/fantasy heart.png": "/static/media/fantasy heart.5b14231c76c5212c3234.png",
+    "static/media/equip weapon.png": "/static/media/equip weapon.5d88c2a91634b7984261.png",
     "index.html": "/index.html",
-    "main.aa099369.css.map": "/static/css/main.aa099369.css.map",
-    "main.aa4a6a99.js.map": "/static/js/main.aa4a6a99.js.map"
+    "main.2a8c2a26.css.map": "/static/css/main.2a8c2a26.css.map",
+    "main.e1cfd42b.js.map": "/static/js/main.e1cfd42b.js.map"
   },
   "entrypoints": [
-    "static/css/main.aa099369.css",
-    "static/js/main.aa4a6a99.js"
+    "static/css/main.2a8c2a26.css",
+    "static/js/main.e1cfd42b.js"
   ]
 }

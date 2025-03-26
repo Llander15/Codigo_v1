@@ -3,25 +3,25 @@ export const skills= [
         name: 'Print',
         code: 'System.out.println"";',
         description:'a',
-        damage: 1
+        damage: 25
     },
     {
         name: 'Integer variable',
         code: 'int number;',
         description:'b',
-        damage: 1
+        damage: 7
     },
     {
         name: 'String variable',
         code: 'String name;',
         description:'c',
-        damage: 1
+        damage: 3
     },
     {
         name: 'For loop',
         code: 'for(x=0:x<=4;x++){};',
         description:'d',
-        damage: 5
+        damage: 11
     },
     {
         name: 'Integer array',

@@ -1,11 +1,17 @@
 import { NavLink } from "react-router-dom";
 import { diff, skill1, skill2, skill3, changeSkill1, changeSkill2, changeSkill3 } from "../js/script";
 import { useEffect, useState } from "react";
+import "./Game.css";
+import { BattleAudioProvider } from "../context/BattleAudioContext";
 
 
     
 
-const logo = require('../images/CLogo.png');
+const logo = require('../Components/Assets/fantasy skull.png');
+const logo2 = require('../Components/Assets/codigoboss.gif');
+const logo3 = require('../Components/Assets/codigoplayer.gif');
+const logo4 = require('../Components/Assets/fantasy heart.png');
+const logo5 = require('../Components/Assets/equip weapon.png');
 export let ssn;//selected skill name
 export let score={
     name : "",
@@ -14,13 +20,12 @@ export let score={
 };
 
 export default function Game(){
-    
-    
-    let[ currentHp, setCurrentHp ] = useState(diff.enemyHp);
-    const [ meesage, setMessage ] = useState();//message used in score page
-    const [ post, setPost ] = useState(false);//post status for score page
 
+    let[ currentHp, setCurrentHp ] = useState(diff.enemyHp);
+    const [ message, setMessage ] = useState();//message used in score page
+    const [ post, setPost ] = useState(false);//post status for score page
     const [name,setName] = useState();
+    const [ tipMessage, setTipMessage ] = useState("");
 
 
     let timerInterval;
@@ -35,6 +40,13 @@ export default function Game(){
             },1000);
         }
     };
+
+    const showTip = () => {
+        setTipMessage("Type as fast as you can!");
+        setTimeout(() => setTipMessage(""), 5000);
+    }
+
+    
     // const pause = () =>{
     //     clearInterval(timerInterval);
     //     timerInterval=null;
@@ -82,7 +94,7 @@ export default function Game(){
     //let selectedSkillNumber;
     const [ selectedSkillNumber, setSelectedSkillNumber ] = useState(0);
     const [ selectedSkillName, setSelectedSkillName ] = useState();
-    const [ selectedSkillCode, setSelecredSkillCode ] = useState();
+    const [ selectedSkillCode, setSelectedSkillCode ] = useState();
     const [ selectedSkillDescription, setSelectedSkillDescription ] = useState();
     const [ selectedSkillDmg, setSelectedSkillDmg ] = useState(); 
     
@@ -100,21 +112,21 @@ export default function Game(){
                 case 1:
                     setSelectedSkillNumber(1);
                     setSelectedSkillName(skill_1.name);
-                    setSelecredSkillCode(skill_1.code);
+                    setSelectedSkillCode(skill_1.code);
                     setSelectedSkillDescription(skill_1.description);
                     setSelectedSkillDmg(skill_1.damage);
                   break;
                 case 2:
                     setSelectedSkillNumber(2);
                     setSelectedSkillName(skill_2.name);
-                    setSelecredSkillCode(skill_2.code);
+                    setSelectedSkillCode(skill_2.code);
                     setSelectedSkillDescription(skill_2.description);
                     setSelectedSkillDmg(skill_2.damage);
                   break;
                 case 3:
                     setSelectedSkillNumber(3);
                     setSelectedSkillName(skill_3.name);
-                    setSelecredSkillCode(skill_3.code);
+                    setSelectedSkillCode(skill_3.code);
                     setSelectedSkillDescription(skill_3.description);
                     setSelectedSkillDmg(skill_3.damage);
                   break;
@@ -183,7 +195,7 @@ export default function Game(){
         }
         setSelectedSkillNumber(0);
         setSelectedSkillName();
-        setSelecredSkillCode();
+        setSelectedSkillCode();
         setSelectedSkillDescription();
         setSelectedSkillDmg();
         ssn='';
@@ -193,83 +205,88 @@ export default function Game(){
         input.value='';   
         setCurrentHp(currentHp);     
     }
-    if(currentHp>0){//Gameplay
-        return(
-            <div className="container">
-                <div className="game-section"> {/* display:flex, felx-direction:row */}
-                    <div className="game-visual">{/* left side, also where battle descriptions and and cards are */}
-                        <div className="game-descriptions">{/*  */}
+    if (currentHp > 0) {
+        return (
+            <div className="gamecontainer">
+                <BattleAudioProvider>
+                </BattleAudioProvider>
+                <div className="game-section"> {/* display: flex; flex-direction: row; */}
+                    <div className="game-visual"> {/* Left side: Battle descriptions and cards */}
+                        <div className="game-descriptions">
                             <div className="boss-section">
-                                <div className="boss-description">{/* boss-name difficulty boss-hp current-hp timer */}
+                                <div className="boss-description"> {/* Boss details */}
                                     <div>
-                                        <p>Boss: <span id="boss-name"> {diff.bossName} </span></p> 
-                                        <p>Difiiculty: {<span id="difficulty">{diff.difficultyName}</span>}</p>
-                                        <p>HP: <span id="current-hp"></span> {currentHp}/{diff.enemyHp} <span id="max-hp"></span></p>
+                                        <p>Boss: <span id="boss-name">{diff.bossName}</span></p>
+                                        <p>Difficulty: <span id="difficulty">{diff.difficultyName}</span></p>
+                                        <p>HP: <span id="current-hp">{currentHp}</span> / {diff.enemyHp}</p>
                                         <p><span id="timer">{timer}s</span></p>
-                                    </div>                              
+                                    </div>
                                 </div>
                                 <div className="boss-img">
-                                    <img id="boss-img" src={logo} alt="Boss" />
+                                    <img id="boss-img" src={logo2} alt="Boss" />
                                 </div>
                             </div>
+    
                             <div className="player-section">
                                 <div className="player-img">
-                                    <img src={logo} alt="Player" />
+                                    <img src={logo3} alt="Player" />
                                 </div>
                                 <div className="player-description">
-                                <p><span className="player-name">Codi</span></p> 
+                                    <p><span className="player-name">Codi</span></p>
                                 </div>
                             </div>
                         </div>
+    
                         <div className="skill-section">
-                            <div className="game-options">{/* where quit, tips, run buttons are located */}
-                                <div className="game-options-left">                              
-                                    <NavLink to='/selection'><p className="game-btn">Back</p></NavLink>
+                            <div className="game-options"> {/* Buttons: Quit, Tips, Run */}
+                                <div className="game-options-left">
+                                    <NavLink to="/selection">
+                                        <p className="game-btn">Back</p>
+                                    </NavLink>
                                 </div>
                                 <div className="game-options-right">
-                                    <button className="game-btn" id="game-tips-btn">Tips</button>
+                                    <button className="game-btn" id="game-tips-btn" onClick={showTip}>Tips</button>
+                                    <div className="tip-container">
+                                    {tipMessage && <p className="tip-message">{tipMessage}</p>}
+                                    </div>
                                     <button className="game-btn" id="game-run-btn" onClick={attack}>Run</button>
                                 </div>
-                                
                             </div>
+    
                             <div className="skill-selection">
-                                <div className="skill-card" id="skill-card-1" onClick={()=>select(1)} >
+                                <div className="skill-card" id="skill-card-1" onClick={() => select(1)}>
                                     <img src={logo} alt="Skill 1" />
                                     <p><span id="skill-name-1">{skillOneName}</span></p>
-                                    <br />
-                                    <p>Skill code: <br /> {skillOneCode}</p>
-                                    <br />
-                                    <p>Skill damage: <br />{skillOneDmg}</p>
+                                    <p>Skill code:<br /> {skillOneCode}</p>
+                                    <p>Skill damage:<br /> {skillOneDmg}</p>
                                 </div>
-                                <div className="skill-card" id="skill-card-2" onClick={()=>select(2)}>
-                                    <img src={logo} alt="Skill 2" />
+    
+                                <div className="skill-card" id="skill-card-2" onClick={() => select(2)}>
+                                    <img src={logo4} alt="Skill 2" />
                                     <p><span id="skill-name-2">{skillTwoName}</span></p>
-                                    <br />
-                                    <p>Skill code: <br /> {skillTwoCode}</p>
-                                    <br />
-                                    <p>Skill damage: <br />{skillTwoDmg}</p>
+                                    <p>Skill code:<br /> {skillTwoCode}</p>
+                                    <p>Skill damage:<br /> {skillTwoDmg}</p>
                                 </div>
-                                <div className="skill-card" id="skill-card-3" onClick={()=>select(3)}>
-                                    <img src={logo} alt="Skill 3" />
+    
+                                <div className="skill-card" id="skill-card-3" onClick={() => select(3)}>
+                                    <img src={logo5} alt="Skill 3" />
                                     <p><span id="skill-name-3">{skillThreeName}</span></p>
-                                    <br />
-                                    <p>Skill code: <br /> {skillThreeCode}</p>
-                                    <br />
-                                    <p>Skill damage: <br />{skillThreeDmg}</p>
+                                    <p>Skill code:<br /> {skillThreeCode}</p>
+                                    <p>Skill damage:<br /> {skillThreeDmg}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="code-section">{/* right side, also where selected code was shown and the input of the player */}
+    
+                    <div className="code-section"> {/* Right side: Selected code and player input */}
                         <div className="selected-code-description">
                             <p>Selected code: <span id="selected-code-name">{selectedSkillName}</span></p>
-                            <br />
-                            <p>code:</p>
+                            <p>Code:</p>
                             <p><span id="selected-code-code">{selectedSkillCode}</span></p>
-                            <br /><br />
                             <p>Description: <span id="selected-code-description">{selectedSkillDescription}</span></p>
                             <p>Damage: <span>{selectedSkillDmg}</span></p>
                         </div>
+    
                         <div className="player-input-section">
                             <input type="text" name="player-input" id="player-input" />
                         </div>
@@ -277,7 +294,9 @@ export default function Game(){
                 </div>
             </div>
         );
-    }   
+    }
+    
+     
     else{//Score or when the player defeated the enemy
         const postScore = async (e) => {
             e.preventDefault();
@@ -310,7 +329,7 @@ export default function Game(){
                             onChange={(e) => setName(e.target.value)}
                         />
                         <h4>Time: {score.time}</h4>
-                        <p>{meesage}</p>
+                        <p>{message}</p>
                         <button type="submit">Post score</button>
                     </form>
                     
