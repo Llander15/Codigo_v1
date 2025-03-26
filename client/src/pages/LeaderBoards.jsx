@@ -14,19 +14,19 @@ export default function LeaderBoards(){
 
         getCollection();
     }, [])
-    const stage1 = leaderBoard.filter(item => item.stage==="Tutorial");
+    const stage1 = leaderBoard.filter(item => item.stage==="Winter");
     stage1.sort((a,b) => a.timer - b.timer);
     for(let x=0; x<stage1.length ;x++){
         stage1[x].rank = (x+1);
     }
 
-    const stage2 = leaderBoard.filter(item => item.stage==="Beginer");
+    const stage2 = leaderBoard.filter(item => item.stage==="Autum");
     stage2.sort((a,b) => a.timer - b.timer);
     for(let x=0; x<stage2.length ;x++){
         stage2[x].rank = (x+1);
     }
 
-    const stage3 = leaderBoard.filter(item => item.stage==="Intermediate");
+    const stage3 = leaderBoard.filter(item => item.stage==="Grassland");
     stage3.sort((a,b) => a.timer - b.timer);
     for(let x=0; x<stage3.length ;x++){
         stage3[x].rank = (x+1);
