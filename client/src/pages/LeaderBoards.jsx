@@ -38,7 +38,7 @@ export default function LeaderBoards(){
                 <h2>Leader Boards</h2>
                 <div className="leaderboard-section">
                     <div className="leaderboard">
-                        <h3>Tutorial</h3>
+                        <h3>Winter</h3>
                         <div>
                             <table className="leaderboard-table">
                                 <thead>
@@ -68,7 +68,7 @@ export default function LeaderBoards(){
                     </div>
 
                     <div className="leaderboard">
-                        <h3>Beginer</h3>
+                        <h3>Autum</h3>
                         <div>
                             <table className="leaderboard-table">
                                 <thead>
@@ -97,7 +97,7 @@ export default function LeaderBoards(){
                     </div>  
 
                     <div className="leaderboard">
-                        <h3>Intermediate</h3>
+                        <h3>Grassland</h3>
                         <div>
                             <table className="leaderboard-table">
                                 <thead>
