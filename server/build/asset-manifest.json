@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.2a8c2a26.css",
+    "main.css": "/static/css/main.d3729d34.css",
     "main.js": "/static/js/main.e6113622.js",
     "static/media/battle-music.mp3": "/static/media/battle-music.4281ec0f70279c5d8fe3.mp3",
     "static/media/menu-music.mp3": "/static/media/menu-music.c65c34ef5af1890219bf.mp3",
@@ -15,11 +15,11 @@
     "static/media/fantasy heart.png": "/static/media/fantasy heart.5b14231c76c5212c3234.png",
     "static/media/equip weapon.png": "/static/media/equip weapon.5d88c2a91634b7984261.png",
     "index.html": "/index.html",
-    "main.2a8c2a26.css.map": "/static/css/main.2a8c2a26.css.map",
+    "main.d3729d34.css.map": "/static/css/main.d3729d34.css.map",
     "main.e6113622.js.map": "/static/js/main.e6113622.js.map"
   },
   "entrypoints": [
-    "static/css/main.2a8c2a26.css",
+    "static/css/main.d3729d34.css",
     "static/js/main.e6113622.js"
   ]
 }
