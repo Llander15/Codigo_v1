@@ -14,18 +14,19 @@
 
 .selection-head {
     position: absolute;
-    top: 20px;
+    top: 80px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px 0;
+    font-size: 32px;
 }
 
 .selection-head .game-btn {
     position: absolute;
-    left: 20px;
-    top: 50%;
+    left: 275px;
+    top: -20%;
     transform: translateY(-50%);
 }
 
@@ -34,16 +35,24 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 .difficultyCard {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 15px;
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 20px;
     text-align: center;
     cursor: pointer;
     transition: transform 0.3s ease;
+    width: 250px;
+    height: 250px;
+}
+
+.difficultyCard img {
+    width: 100%;
+    height: 170px; /* Adjust for bigger cards */
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .difficultyCard:hover {
@@ -52,11 +61,25 @@
 
 .selection-confirmation-section {
     position: absolute;
-    bottom: 20px;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-    color: white;
-    width: 350px;
+    bottom: 170px;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 15px 20px;
+    color: black;
+    width: 350px; 
 }
+
+/* Adjust Confirm button inside the section */
+.selection-confirmation-section .game-btn {
+    float: right; /* Align the button to the right */
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.difficultyCard a, .selection-confirmation-section a {
+    text-decoration: none;
+}
+
